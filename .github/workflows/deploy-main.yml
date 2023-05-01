@@ -12,7 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install modules
-        run: npm run test
+        run: yarn
+      - name: Run tests
+        run: yarn test
 
   deploy:
     name: Deploy to EC2 on main branch push
