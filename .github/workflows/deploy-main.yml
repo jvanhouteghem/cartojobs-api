@@ -29,4 +29,6 @@ jobs:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          script: whoami
+          script:  |
+            cd apps/cartobs-api
+            sudo docker compose up -d --build
